@@ -1,3 +1,5 @@
+## Trabalho Algoritmo e Estrutura de Dados 2, Hash Table.
+
 # Além disso, você deve:
 #    1.    Justificar matematicamente ou logicamente como sua função tenta distribuir os dados.
 Comecei tentando apenas usando a função ord() do python, que utiliza a tabela ASCII, somando e então % de size, porém não parecia ser o suficiente, então adicionei números primos a equação, fazendo o caracter 0, 1, 2 serem multiplicados por 3 números primos (e o restante continuou apenas com a função ord() normal, sem multiplicar por números primos), e então somava tudo e fazia % de size, retornando a posição de onde a string deve ser armazenada.
