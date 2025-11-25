@@ -19,6 +19,8 @@ class HashTable():
         self.tabela = [[] for _ in range (size)]
         self.primos = [17, 43, 97]
 
+        self.colisoes = 0
+
     def _hash(self, key):
         soma = 0
         for i in range(len(key)):
@@ -31,6 +33,9 @@ class HashTable():
     def inserir(self, key, string):
         posicao = self._hash(key)
         tabela = self.tabela[posicao]
+
+        if self.tabela[posicao] != []:
+            self.colisoes += 1
 
         for i, (k, v) in enumerate(tabela):
             if k == key:
@@ -46,3 +51,5 @@ for nome in nomes:
 
 for i, v in enumerate(hash_table.tabela):
     print(f"{i+1}: {v}")
+
+print(f"\nQuantidade de colisões: {hash_table.colisoes}")
